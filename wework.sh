@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # shell调用企业微信发送消息命令
 # ./weowrk.sh ${人员} "消息"
 # 例：
@@ -52,6 +53,7 @@ fi
 if [ "$userList" != '[]' ];then
     OLD_IFS="$IFS"
     IFS="|"
+    echo $touser
     templist=($touser)
     IFS="$OLD_IFS"
     touser=
@@ -97,4 +99,4 @@ accesstoken=$(/usr/bin/curl -sSl https://qyapi.weixin.qq.com/cgi-bin/gettoken?co
 msgsend_url="https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${accesstoken}"
 json_params="{\"touser\":\"${touser}\",\"toparty\":\"${toparty}\",\"msgtype\":\"text\",\"agentid\":\"${agentid}\",\"text\":{\"content\":\"${WEWORK_CONTENT}\"},\"safe\":\"0\"}"
 echo $json_params
-# curl -sSl -XPOST -d "${json_params}" "${msgsend_url}"
+curl -sSl -XPOST -d "${json_params}" "${msgsend_url}"
