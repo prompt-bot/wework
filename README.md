@@ -5,15 +5,15 @@
 - WEWORK_TOUSER = amy|jack
 - WEWORK_CONTENT = "you have a new message..."
 - WEWORK_AGENTID = 1000001
-- WEWORK_APPSECRET = xxxxx
-- WEWORK_CORPID = xxxx
+- WEWORK_APPSECRET = tTdO5Nn9IBG4iPxxxxxxw0nUTyDF_OrXsUwwbogY
+- WEWORK_CORPID = ww1efaxxxxxxxb24df
 - WEWORK_USERLIST = [{"name":"amy","userid":"32ee8a9a5d9c6bd2b15c8cf2cba7ba01"},{"name":"jack","userid":"c9ab9a30645f85e07c3f176d21b6c220"}]
 
 
 
 ### How to get enterprise wechat userlist
 
-- Due to the limit of obtaining token times, we must get user list before use this action, run script `export WEWORK_APPSECRET=xxx && export WEWORK_APPSECRET=xxxx && ./getuserList.js`
+- Due to the limit of obtaining token times, we must get user list before use this action, run script `export WEWORK_CORPID=xxx && export WEWORK_APPSECRET=xxxx && node ./getuserList.js`
 
 ### Used for Github Actions
 ``` yaml
@@ -42,8 +42,8 @@ jobs:
 
 1.  update gitlab group CI / CD Settings -> Variables
      - WEWORK_AGENTID = 1000001
-     - WEWORK_APPSECRET = xxxxx
-     - WEWORK_CORPID = xxxx
+     - WEWORK_APPSECRET = tTdO5Nn9IBG4iPxxxxxxw0nUTyDF_OrXsUwwbogY
+     - WEWORK_CORPID = ww1efaxxxxxxxb24df
      - WEWORK_USERLIST = [{"name":"amy","userid":"32ee8a9a5d9c6bd2b15c8cf2cba7ba01"},{"name":"jack","userid":"c9ab9a30645f85e07c3f176d21b6c220"}]
 
 2. update `gitlab-ci.yml`
