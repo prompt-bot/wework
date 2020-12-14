@@ -1,8 +1,8 @@
 const axios = require('axios');
 
-const corpId = 'xxxx';
-const corpSecret = 'xxxx';
-const agentId = '10000001'
+const corpId = process.env.WEWORK_CORPID;
+const corpSecret = process.env.WEWORK_APPSECRET;
+// const agentId = process.env.WEWORK_AGENTID;
 
 async function getAccessToken(corpid, corpsecret) {
     return axios.get(`https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=${corpid}&corpsecret=${corpsecret}`).then(res => res.data.access_token).catch(err => {

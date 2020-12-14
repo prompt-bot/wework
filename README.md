@@ -13,7 +13,7 @@
 
 ### How to get enterprise wechat userlist
 
-- script `./getuserList.js`
+- Due to the limit of obtaining token times, we must get user list before use this action, run script `export WEWORK_APPSECRET=xxx && export WEWORK_APPSECRET=xxxx && ./getuserList.js`
 
 ### Used for Github Actions
 ``` yaml
