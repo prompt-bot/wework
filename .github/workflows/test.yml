@@ -10,7 +10,7 @@ jobs:
     steps:
       -
         name: test send message
-        uses: ntfs32/wework@v0.1.0-alpha
+        uses: ntfs32/wework@master
         with:
           WEWORK_USERLIST: ${{ secrets.WEWORK_USERLIST }}
           WEWORK_CORPID: ${{ secrets.WEWORK_CORPID }}
