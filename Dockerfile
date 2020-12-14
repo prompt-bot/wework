@@ -9,4 +9,4 @@ RUN \
 
 ADD wework.sh /opt/wework.sh
 
-CMD [ "bash" ]
+CMD [ "/opt/wework.sh" ]
