@@ -1,0 +1,26 @@
+name: 'WeChat Enterprise App Messages'
+description: 'Github Action for Sending Wechat Enterprise App messages'
+author: 'shaddock <hushuang123a@gmail.com>'
+inputs: 
+  WEWORK_APPSECRET:
+    description: 'Wechat app secret'
+  WEWORK_AGENTID:
+    description: 'Wechat agentid'
+    default: "markdown"
+  WEWORK_CORPID:
+    description: 'Wechat corpid'
+  WEWORK_USERLIST:
+    description: 'message userlist'
+    default: '[{"name":"张三","userid":"32ee8a9a5d9c6bd2b15c8cf2cba7ba01"}]'
+  WEWORK_CONTENT:
+    description: 'message content'
+  WEWORK_TOUSER:
+    description: 'username in userlist'
+    default: '张三'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  color: "blue"
+  icon: "message-square"
