@@ -16,7 +16,7 @@
 - script `./getuserList.js`
 
 ### Used for Github Actions
-```
+``` yaml
 name: ci
 on:
   push:
